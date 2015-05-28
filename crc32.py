@@ -1,3 +1,5 @@
+# by lwc
+
 poly = 0xedb88320
 startxor = 0xffffffff
 
