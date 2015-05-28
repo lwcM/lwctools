@@ -1,6 +1,8 @@
-# my implementation of sha1
+# by lwc
+
+# It's my implementation of sha1
 # 1. we can change the last 8 bytes of padding (msgbytes)
-# 2. we can restore a state by a sha1 result (hex)
+# 2. we can restore internal state by a sha1 result (hex)
 #    (it means we can run sha1 with our different initial constant)
 
 import struct
