@@ -17,3 +17,19 @@ def ext_euclid(a, b):
 def mod_mul_inverse(a, n):
     return ext_euclid(a, n)[0]
 
+
+# baby-step giant-step algorithm
+# given a^x = b (mod n), find x
+def babyStep_giantStep(a, b, n):
+	m = int(math.ceil(math.sqrt(n)))
+	hh = {pow(a, j, n):j for j in range(m)}
+	
+	g_m_inv = mod_mul_inverse(pow(a, m, n), n)
+	
+	try_i = b
+	for i in range(0, m):
+		if try_i in hh:
+			return i*m+hh[try_i]
+		try_i = try_i * g_m_inv % n
+
+
